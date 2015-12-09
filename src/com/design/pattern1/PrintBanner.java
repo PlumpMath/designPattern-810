@@ -3,19 +3,21 @@ package com.design.pattern1;
 /**
  * Created by yongjunjung on 2015. 12. 9..
  */
-public class PrintBanner extends Banner implements Print {
+public class PrintBanner extends Print {
 
-    public PrintBanner(String string) {
-        super(string);
+    private Banner banner;
+
+    public PrintBanner(String string){
+        this.banner = new Banner(string);
     }
 
     @Override
     public void printWeak() {
-        showWithParen();
+        banner.showWithParen();
     }
 
     @Override
     public void printStrong() {
-        showWithAster();
+        banner.showWithAster();
     }
 }
