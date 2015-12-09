@@ -1,6 +1,13 @@
+import com.design.pattern1.Print;
+import com.design.pattern1.PrintBanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+        Print print = new PrintBanner("Hello");
+        print.printStrong();
+        print.printWeak();
+
     }
 }
